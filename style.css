@@ -1,0 +1,565 @@
+/* 🌌 Tema Galáctico */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at 20% 30%, #2b1055, #000);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estrelas animadas */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.3;
+    animation: stars 100s linear infinite;
+    z-index: -1;
+}
+
+@keyframes stars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-500px, -500px); }
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    background: linear-gradient(90deg, #3b0066, #0b0033);
+    padding: 1.5em 0;
+    box-shadow: 0 0 20px #bb86fc;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: #f0d9ff;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fdd835;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover, .ativo {
+    color: #bb86fc;
+    text-shadow: 0 0 10px #bb86fc;
+}
+
+/* Conteúdo principal */
+main {
+    text-align: center;
+    padding: 3em 1em;
+    flex: 1;
+}
+
+.intro p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 1em auto;
+}
+
+/* Botão */
+.botao, button {
+    background: linear-gradient(90deg, #6a00f4, #bb86fc);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.botao:hover, button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #bb86fc;
+}
+
+/* Projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.projetos article {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5em;
+    height: 200px;
+    transition: transform 0.3s;
+    backdrop-filter: blur(6px);
+}
+
+.projetos article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #bb86fc;
+}
+
+.projetos img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #bb86fc;
+}
+
+/* Perfil */
+.perfil {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #fdd835;
+    box-shadow: 0 0 15px #fdd835;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    text-align: center;
+    background: linear-gradient(90deg, #0b0033, #3b0066);
+    padding: 1em 0;
+    color: #fdd835;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 10px #bb86fc;
+}
+/* ==== Melhor espaçamento de texto e layout central ==== */
+.sobre {
+    max-width: 900px;        /* limita a largura máxima do texto */
+    margin: 0 auto;          /* centraliza horizontalmente */
+    padding: 2em 1.5em;      /* cria espaço interno nas laterais e no topo */
+    text-align: center;      /* mantém o alinhamento central */
+    line-height: 1.8;        /* aumenta o espaçamento entre linhas */
+}
+
+.sobre p {
+    text-align: justify;     /* deixa o texto alinhado dos dois lados */
+    text-indent: 1.5em;      /* recuo no início dos parágrafos (opcional) */
+}
+
+.sobre h2 {
+    margin-bottom: 1em;
+    color: #fdd835;          /* mantém o título em amarelo */
+}
+.sobre {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+}
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em;
+    min-height: calc(100vh - 160px); /* mantém o footer embaixo */
+}
+
+.contato-info {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3em 2em;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(187, 134, 252, 0.4);
+    max-width: 600px;
+    width: 100%;
+}
+
+.contato-info h2 {
+    color: #fdd835;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1em;
+}
+
+.contato-info p {
+    margin-bottom: 2em;
+    line-height: 1.6;
+}
+
+.contato-links a {
+    display: block;
+    color: #bb86fc;
+    font-size: 1.1em;
+    margin: 0.7em 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contato-links a:hover {
+    color: #fdd835;
+    text-shadow: 0 0 10px #fdd835;
+    transform: scale(1.05);
+}
+
+.contato-links i {
+    margin-right: 0.5em;
+}
+/* ==== Animações gerais ==== */
+
+/* Flutuação suave para ícones */
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.icon-animate {
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+/* Brilho pulsante para botões */
+@keyframes glowButton {
+  0% { box-shadow: 0 0 8px rgba(187,134,252,0.4); }
+  50% { box-shadow: 0 0 20px rgba(187,134,252,0.8); }
+  100% { box-shadow: 0 0 8px rgba(187,134,252,0.4); }
+}
+
+button, .botao {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+button:hover, .botao:hover {
+  transform: scale(1.05);
+  animation: glowButton 2s ease-in-out infinite;
+}
+
+/* Card de projeto – efeito de aparição + hover */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.projetos article {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.projetos article:nth-child(2) { animation-delay: 0.4s; }
+.projetos article:nth-child(3) { animation-delay: 0.6s; }
+/* e por aí vai… */
+
+.projetos article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #bb86fc;
+}
+
+/* Fundo de estrelas já parte – podemos reforçar movimento */
+@keyframes slowPan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+body::before {
+  animation: slowPan 120s linear infinite;
+}
+
+/* ===== Sobre Mim (igual outras abas) ===== */
+.sobre {
+    width: 80%;
+    margin: 40px auto;
+    color: #fff;
+    padding: 40px 50px; /* AQUI aumenta o espaçamento */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(180, 120, 255, 0.2);
+}
+
+/* ===========================
+   TÍTULO DAS HABILIDADES 
+=========================== */
+.habilidades {
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    color: #fff;
+}
+
+.habilidades h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #fdd835;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(253, 216, 53, 0.5);
+}
+
+/* ===========================
+   GRID DE HABILIDADES 
+=========================== */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* ===========================
+   ITEM INDIVIDUAL 
+=========================== */
+.hab-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    opacity: 0;
+    
+    /* Animação */
+    animation: fadeUp 0.8s ease forwards;
+    
+    /* Hover sem desalinhamento */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hab-item:hover {
+    transform: translateY(-5px); /* só movimento vertical, sem rotação */
+    color: #fdd835;
+}
+
+/* ===========================
+   ÍCONE ESTILO "APP"
+=========================== */
+.hab-icon {
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(180, 120, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #c79bff;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.hab-item:hover .hab-icon {
+    box-shadow: 0 0 20px rgba(255, 220, 120, 0.5);
+    color: #fdd835;
+}
+
+.habilidade-item {
+    height: 120px;
+}
+
+/* ===========================
+   ANIMAÇÕES 
+=========================== */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* delays individuais suavizados */
+.hab-item:nth-child(1) { animation-delay: 0.1s; }
+.hab-item:nth-child(2) { animation-delay: 0.2s; }
+.hab-item:nth-child(3) { animation-delay: 0.3s; }
+.hab-item:nth-child(4) { animation-delay: 0.4s; }
+.hab-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Animações extras */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1.5s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation: bounceIn 1.5s ease forwards;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* ===== FOTO DE PERFIL ===== */
+.perfil {
+    width: 180px;
+    border-radius: 50%;
+    border: 3px solid #a56eff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(150, 100, 255, 0.4);
+}
+
+.hab-icon {
+    transition: 0.4s ease;
+}
+
+.hab-item:hover .hab-icon {
+    color: #fdd835;
+    box-shadow: 0 0 20px #fdd835;
+    transform: scale(1.15);
+}
+
+/* ==========================================================
+   🔮 ESTILO UNIVERSAL DE CARDS PARA TODO O SITE
+   (3 por linha → 2 no tablet → 1 no celular)
+========================================================== */
+
+/* Container padrão dos cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em;
+
+    width: 100%;
+    margin: 2em auto;
+
+    padding: 0 1em;  /* 👈 AQUI: espaço nas laterais */
+    box-sizing: border-box;
+}
+
+/* Estilo base do card */
+.card {
+    background: rgba(255, 255, 255, 0.04); /* vidro roxo/galáxia */
+    padding: 1.5em;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(67, 20, 206, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px;
+}
+
+/* Imagens nos cards */
+.card img,
+.card video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+/* Título */
+.card h3 {
+    color: #fdd835;
+    margin-bottom: 0.6em;
+    font-size: 1.3rem;
+}
+
+/* Texto */
+.card p {
+    color: #ffffffd7;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.1em;
+}
+
+/* Botão */
+.card a.btn,
+.card button {
+    background: linear-gradient(135deg, #a47cf3, #cfa1ff);
+    border: none;
+    padding: 10px 18px;
+    color: #2f005c;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.card a.btn:hover,
+.card button:hover {
+    box-shadow: 0 0 15px rgba(255, 223, 99, 0.7);
+    transform: scale(1.05);
+}
+
+/* Hover geral */
+.card:hover {
+    transform: translateY(-8px);
+    position: relative; /* impede o empurro */
+    z-index: 5;          /* evita sobreposição feia */
+    box-shadow: 0 0 30px rgba(255, 223, 99, 0.4);
+}
+
+/* ==========================================================
+   RESPONSIVIDADE UNIVERSAL
+========================================================== */
+
+@media (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
